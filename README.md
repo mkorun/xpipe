@@ -1,5 +1,10 @@
 # xpipe<sup>[^1]</sup>
 
+[![CI](https://github.com/mkorun/xpipe/actions/workflows/ci.yml/badge.svg)](https://github.com/mkorun/xpipe/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/xpipe.svg)](https://www.npmjs.com/package/xpipe)
+[![npm downloads](https://img.shields.io/npm/dm/xpipe.svg)](https://www.npmjs.com/package/xpipe)
+[![license](https://img.shields.io/npm/l/xpipe.svg)](https://github.com/mkorun/xpipe/blob/main/LICENSE)
+
 Use cross-platform IPC paths in Node.js.
 
 ## Background
