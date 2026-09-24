@@ -1,6 +1,6 @@
 {
   "name": "xpipe",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Use cross-platform IPC paths in Node.js.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/picoblitz/xpipe.git"
+    "url": "git+https://github.com/mkorun/xpipe.git"
   },
   "keywords": [
     "cross platform",
@@ -23,7 +23,7 @@
   "author": "Michael Kortstiege",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/picoblitz/xpipe/issues"
+    "url": "https://github.com/mkorun/xpipe/issues"
   },
-  "homepage": "https://github.com/picoblitz/xpipe#readme"
+  "homepage": "https://github.com/mkorun/xpipe#readme"
 }
