@@ -3,8 +3,14 @@
   "version": "1.0.9",
   "description": "Use cross-platform IPC paths in Node.js.",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test"
   },
   "repository": {
     "type": "git",
