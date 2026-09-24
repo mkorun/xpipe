@@ -1,0 +1,40 @@
+name: Stage publish
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm test
+
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://registry.npmjs.org'
+      # npm's trusted publishing needs npm CLI >= 11.5.1;
+      # Node 22's bundled npm may be older, so pin it explicitly.
+      - run: npm install -g npm@latest
+      - run: npm install
+      # Stages the release only; a maintainer must still approve it
+      # with 2FA (CLI: `npm stage approve <stage-id>`, or on npmjs.com
+      # under "Staged Packages") before it becomes installable.
+      - run: npm stage publish
